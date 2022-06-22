@@ -1,0 +1,90 @@
+*{
+    font-family: 'Comfortaa', cursive;
+}
+.body{
+    overflow-x: hidden;
+}
+#gameContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#gameBoard{
+    border: 3px solid;
+}
+#scoreText{
+    font-size: 50px;
+}
+#resetBtn{
+    font-size: 22px;
+    width: 100px;
+    height: 50px;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch input{
+    margin: 10px;
+    display: none;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0, 140, 255);
+    border-radius: 34px;
+    transition: .3s;
+}
+.slider::before{
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: yellow;
+    border-radius: 50%;
+    transition: .4s;
+}
+input:checked + .slider{
+    background: #3f03af;
+}
+input:checked + .slider::before{
+    background: rgb(231, 228, 228);
+    transform: translateX(26px);
+}
+.dark-mode{
+    background: #000000;
+}
+.dark-mode h1 {
+    color:#00ff00;
+}
+.dark-mode #resetBtn {
+    border-color: #00ff00;
+    color: #00ff00;
+}
+.dark-mode #scoreText{
+    color: #00ff00;
+}
+.dark-mode #gameBoard{
+    border-color: #00ff00;
+    background: rgb(114, 114, 114);
+}
+.secret{
+    font-size: 3px;
+    text-align: center;
+}
+.secret span{
+    color: #f7f0e9;
+    
+}
